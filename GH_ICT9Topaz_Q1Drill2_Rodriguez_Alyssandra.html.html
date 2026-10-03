@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q1 Drill 2</title>
+    <style>
+        
+        body{
+            align-content: center;
+            background-color: rgb(240, 239, 247);
+            color: rgb(28, 18, 73);
+        }
+
+        .rate{
+            box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+            background-color: rgb(110, 125, 156);
+        }
+
+        .movie-icon{
+            height: 100px;
+            width: auto;
+            padding: 5px;
+        }
+
+        .movie-title{
+            width: 100%;
+        }
+
+        div{
+            border: 1px gray;
+            background-color: rgb(249, 250, 250);
+            border-radius: 4px;
+            box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+            -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);            
+            padding: 10px;
+            border: 2px dotted;
+            
+        }
+
+        .review{
+            align-content: center;
+            margin: 5px;
+            padding: 10px;
+            width: 500px;
+            height: 100px;
+            border-radius: 10px;
+            border-style: dashed;
+            border-color: rgba(74, 85, 136, 0.479);
+        }
+
+        .submit-review{
+            width: 100%;
+            padding: 5px;
+            background-color: rgb(99, 120, 179);
+            border-style: none;
+            margin-top: -50px;
+        }
+    </style>
+<center>
+</head>
+<body>
+    <h1 class="rate">Rate a Movie!</h1>
+    <p>Share your top pick movie and write a review!</p>
+    <div>
+        <img class="movie-icon" src="movieiconred.png" alt="movieicon">
+<form action="/action_page.php">
+    <input class="movie-title" type="text" id="movietitle" name="movie-title" placeholder="Enter a Movie Title"><br><br>
+</form>
+
+<!--GENRES-->
+<form class="genres">
+    <fieldset>
+        <legend>Genres<i>(select all that apply):</i></legend>
+        <form action="/action_page.php">
+        <input type="checkbox" id="action" name="action" value="action">
+        <label for="action"> Action</label>
+
+        <input type="checkbox" id="comedy" name="comedy" value="comedy">
+        <label for="vehicle2">Comedy</label>
+
+        <input type="checkbox" id="drama" name="drama" value="drama">
+        <label for="drama">Drama</label>
+
+        <input type="checkbox" id="fantasy" name="fantasy" value="fantasy">
+        <label for="drama">Fantasy</label>
+
+        <input type="checkbox" id="sci-fi" name="sci-fi" value="sci-fi">
+        <label for="drama">Sci-Fi</label>
+    </fieldset>
+
+<!--RATING-->
+    <fieldset>
+        <legend>Rating:</legend>
+        <input type="radio" id="onestar" name="onestar" value="⭐">
+        <label for="onestar">⭐</label>
+
+    <input type="radio" id="twostar" name="twostar" value="⭐⭐">
+    <label for="twostar">⭐⭐</label>
+
+    <input type="radio" id="threestar" name="threestar" value="⭐⭐⭐">
+    <label for="threestar">⭐⭐⭐</label>
+
+    <input type="radio" id="fourstar" name="fourstar" value="⭐⭐⭐⭐">
+    <label for="fourstar">⭐⭐⭐⭐</label>
+
+    <input type="radio" id="fivestar" name="fivestar" value="⭐⭐⭐⭐⭐">
+    <label for="fivestar">⭐⭐⭐⭐⭐</label>
+    </fieldset>
+</form>
+
+<form>
+    <input class="review" type="text" id="review" name="review" placeholder="Write Your Review..."><br><br>
+</form>
+
+<form>
+    <input class="submit-review" type="submit" value="Submit Review">
+</form>
+
+<p>Movie Review Tips: Click <a href="https://www.nyfa.edu/student-resources/9-tips-for-writing-a-film-review/">here</a></p>
+    </div>
+</body>
+    <footer>
+        <p>© 2026 | Alyssandra Rodriguez | 9-Topaz | Q1 Drill 2</p>
+    </footer>
+</center>
+</html>

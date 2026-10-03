@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q1 Skills Test</title>
+<style>
+
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body{
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        background-image: url(robotthinking.png);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    .container{
+        display: flex;
+        flex: 1;
+        max-width: 1200px;
+        width: 100%;
+        margin: 20px auto;
+        position: relative;
+        align-items: flex-start;
+    }
+
+    .card{
+        background-color: aliceblue;
+        width: 420px;
+        padding: 30px 25px;
+        border-radius: 4px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        z-index: 2;
+    }
+
+    .logo-container{
+        text-align: center;
+        height: auto;
+    }
+
+    .logo{
+        width: 80px;
+        height: auto;
+    }
+
+    .title{
+        text-align: center;
+        color: blue;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
+        font-size: 20px;
+        margin-bottom: 15px;
+        text-decoration: underline;
+    }
+
+    .introduction-text{
+        font-size: 12px;
+        color: #333;
+        margin-bottom: 20px;
+        line-height: 1.4;
+    }
+
+    .form-group{
+        margin-bottom: 12px;
+    }
+
+    label{
+        display: block;
+        font-size: 13px;
+        font-weight: bold;
+        margin-bottom: 4px;
+        color: #333
+    }
+
+    input[type="text"]{
+            width: 100%;
+            padding: 6px 8px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 12px;
+            outline: none;
+        }
+
+        input[type="email"]{
+            width: 100%;
+            padding: 6px 8px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 12px;
+            outline: none;
+        }
+
+        select{
+            width: 100%;
+            padding: 6px 8px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 12px;
+            outline: none;
+        }
+        
+        textarea {
+            width: 100%;
+            padding: 6px 8px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 12px;
+            outline: none;
+        }
+
+        textarea{
+            resize: vertical;
+            height: 60px;
+        }
+
+        .radio-group{
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 13px;
+            margin-top: 4px;
+            padding-bottom: 4px;
+        }
+
+        .checkbox-group{
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 13px;
+            margin-top: 4px;
+            padding-bottom: 4px;
+        }
+
+        .radio-group label{
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .checkbox-group label{
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .section-title{
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            color: blue;
+            font-size: 15px;
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .stuff-to-do-list{
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 13px;
+            color: #333;
+            padding-left: 20px;
+            line-height: 1.4;
+        }
+
+        .link-list{
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 13px;
+            color: #333;
+            padding-left: 20px;
+            line-height: 1.4;
+        }
+
+        .link-list a{
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        .button-container{
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .submit-button{
+            background-color: #0066cc;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            font-size: 13px;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+
+        footer{
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 14px;
+            color: #444;
+            padding: 15px;
+            background-color: #b0bac3;
+            margin: auto;
+        }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="logo-container">
+                <img src="obmclogo.png" alt="OBMC Logo" class="logo">
+            </div>
+
+            <div class="title">
+                OBMC Robotics Club </br>
+                Application Form
+            </div></br>
+
+            <p class="introduction-text">
+                Welcome! Please fill out this form to <b>apply</b> for our school's <em>Robotics Club.</em>
+            </p></br>
+
+        <!--FORMS-->
+            <form>
+                <div class="form-group">
+                    <label>Full Name:</label>
+                    <input type="text" required>
+                </div>
+        
+                <div class="form-group">
+                    <label>Email:</label>
+                    <input type="text" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Grade Level:</label>
+                    <select>
+                        <option value="7">Grade 7</option>
+                        <option value="8">Grade 8</option>
+                        <option value="9">Grade 9</option>
+                        <option value="10">Grade 10</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Gender:</label>
+                    <div class="radio-group">
+                        <label><input type="radio">Male</label>
+                        <label><input type="radio">Female</label>
+                        <label><input type="radio">Other</label>
+                    </div>
+
+                    <div class="form-group">
+                        <label>What are your skills?</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox">Coding</label>
+                            <label><input type="checkbox">Design</label>
+                            <label><input type="checkbox">Electronics</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reason">Tell us why you want to join:</label>
+                        <textarea id="reason" name="reason"></textarea>
+                    </div>
+                </div>
+
+        <div class="section-title">Top Robotics Activities We Offer:</div>
+        <ul class="stuff-to-do-list">
+            <li>Line Following Robots</li>
+            <li>Obstacle Avoidance Programming</li>
+            <li>Light Following Robot</li>
+        </ul>
+
+        <div class="section-title">Helpful Links:</div>
+            <ol class="link-list">
+                <li><a href="https://www.roborave.org/">Roborave.org</a></li>
+                <li><a href="https://www.firstinspires.org/">FIRST Robotics</a></li>
+            </ol>
+
+        <div class="button-container">
+            <button type="submit" class="submit-button">Submit Application</button>
+        </div>
+    </form>
+        </div>
+    </div>
+</body>
+
+<footer>
+    <p>© 2026 Robotics Club Application | Created by Alyssandra C. Rodriguez | 9-Topaz 
+    </p>
+</footer>
+</html>

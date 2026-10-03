@@ -1,0 +1,137 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blackstone Bistro</title>
+        <style>
+            body{
+                background-color: rgb(240, 245, 250);
+                color: rgb(44, 61, 90);
+                margin: 0;
+            }
+
+            .hero-image{
+                background-image: url(lightblue.jpg);
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                height: 100%;
+                padding: 5px;
+                color: rgb(20, 34, 66);
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .button{
+                background-color: rgb(91, 126, 190);
+                margin-left: 15px;
+            }
+
+            footer{
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="hero-image">
+            <div class="hero-text">
+            <h1>Blackstone Bistro | Pizza-on-Demand</h1><hr>
+            <p>
+            Our 12" wood-fired pizzas are avaiable for delivery. 
+            Build your custom pizza and we'll deliver it within an hour.
+            </p>
+            </div>
+        </div>
+
+        
+        <form>
+            <!--CUSTOMER INFORMATION-->
+        <fieldset>
+            <legend>Your Information</legend>
+            <label for="full-name">Name:</label>
+            <input id="full-name" type="text"/><br>
+
+            <label for="addr">Address:</label>
+            <input id="addr" type="text"/><br>
+
+            <label fo="telno">Contact:</label>
+            <input id="telno" type="tel"/><br>
+
+            <label for="em">Email:</label>
+            <input id="em" type="email"/><br>
+
+            <label for="request">Delivery Intsructions:</label><br>
+            <textarea name="delreq" id="request" rows="8" cols="50"></textarea>
+        </fieldset>
+    </form>
+    
+    <h2>Design your dream pizza:</h2>
+
+    <!--Pizza Specifications-->
+    <form>
+        <fieldset>
+            <legend>Pizza Specifications</legend> 
+            <!--(fieldset>legend)*3-->
+                <!--Crust-->
+            <fieldset>
+                <legend>Crust <em>(Choose one)</em>:</legend>
+                <input type="radio" name="crust">
+                <label>Classic White</label><br>
+
+                <input type="radio" name="crust">
+                <label>Multigrain</label><br>
+
+                <input type="radio" name="crust">
+                <label>Cheese-stuffed crust</label><br>
+
+                <input type="radio" name="crust">
+                <label>Gluten-free</label><br>
+            </fieldset><br>
+                <!--Toppings-->
+            <fieldset>
+                <legend>Toppings <em>(Choose as many as you want)</em>:</legend>
+                <input type="checkbox">
+                <label>Red sauce</label><br>
+
+                <input type="checkbox">
+                <label>White sauce</label><br>
+
+                <input type="checkbox">
+                <label>Mozzarella cheese</label><br>
+
+                <input type="checkbox">
+                <label>Pepperoni</label><br>
+
+                <input type="checkbox">
+                <label>Mushrooms</label><br>
+
+                <input type="checkbox">
+                <label>Peppers</label><br>
+
+                <input type="checkbox">
+                <label>Anchovies</label><br>
+            </fieldset><br>
+                <!--Quantity-->
+            <fieldset>
+                <legend>Quantity</legend>
+                <label>How many pizzas:</label>
+                <select>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+            </fieldset><br>
+        </fieldset><br>
+            <input type="submit" value="Bring me my pizza!!!" class="button"> 
+            <input type="reset" value="Let me order again..." class="button">
+    </form>
+
+    <footer>
+        <p>© 2026 | Alyssandra Rodriguez | 9-Topaz</p>
+    </footer>
+    </body>
+    </html>

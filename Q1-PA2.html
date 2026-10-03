@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML LIST</title>
+<!--INTERNAL CSS-->
+    <style>
+        body{
+            background-color: rgb(243, 240, 231);
+            color: rgb(56, 56, 56);
+        }
+
+        h1{
+            background-color: rgb(193, 200, 236);
+        }
+
+        p{
+            color: rgb(82, 96, 143);
+        }
+
+        dt{
+            font-style: italic;
+            color: rgb(27, 94, 126);
+        }
+
+        .desc-list{
+            border: 2.5px dotted rgb(101, 135, 177);
+            background-color: rgb(209, 221, 230);
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            box-shadow: 16px 24px 21px 2px rgba(0,0,0,0.75);
+            -webkit-box-shadow: 16px 24px 21px 2px rgba(0,0,0,0.75);
+            -moz-box-shadow: 16px 24px 21px 2px rgba(0,0,0,0.75);
+        }
+
+        .nest-list{
+            border: 2.5px dotted rgb(136, 101, 177);
+            background-color: rgb(222, 209, 230);
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            box-shadow: 16px 24px 21px 2px rgba(0,0,0,0.75);
+            -webkit-box-shadow: 16px 24px 21px 2px rgba(0,0,0,0.75);
+            -moz-box-shadow: 16px 24px 21px 2px rgba(0,0,0,0.75);
+        }
+    </style>
+</head>
+<body>
+    <h1>The Owl and the Cat</h1>
+<hr
+    <p>The Owl looked up to the stars above <br />
+        And sang to a small guiter <br />
+        "O lovely Cat! O Cat, my love, <br />
+        What a beautiful Cat you are, <br />
+        You are, you are! <br />
+        What a beautiful Cat you are!"
+    </p>
+<!--DESCRIPTION LIST-->
+    <div class="desc-list">
+        <h5>Description List</h5>
+        <!--dl>(d1>dd)*3-->
+        <dl>
+            <dl></dl>
+            <dt>Bunny
+                <dd>Small, fluffy, short tempered social pet.</dd>
+            </dt>
+
+            <dt>Dog
+                <dd>"Man's best friend." A friendly pal, who's always by your side.</dd>
+            </dt>
+
+            <dt>Cat
+                <dd>An ill-tempered pet that instead of acting like a friendly pal, treats you like you're it's pet.</dd>
+            </dt>
+        </dl>
+    </div>
+
+    <!--NESTED LIST-->
+    <div class="nest-list">
+        <h5>ICT Q1 WORK PLAN</h5>
+        <ol style="list-style-type: upper-roman;">
+            <li>INTRO TO HTML</li>
+                <ol style="list-style-type: upper-alpha;">
+                    <li>What is HTML?</li>
+                    <li>HTML Structure & Tags</li>
+                    <li>Setting up Text Editor: Visual Code Studio</li>
+                </ol>
+            <li>HTML LIST, LINKS & IMAGES</li>
+                <ol style="list-style-type: upper-alpha;">
+                    <li>Unordered and Ordered List</li>
+                    <li>Description List and Nested List</li>
+                    <li>Linking Web Pages with Hyperlinks</li>
+                </ol>
+        </ol>
+    </div>
+</body>
+</html>

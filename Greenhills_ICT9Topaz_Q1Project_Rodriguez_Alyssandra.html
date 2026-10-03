@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q1 Project</title> 
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* NAVIGATION BAR */
+        .container-nav-hero{
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .navbar{
+            background-image: url(navbarbackground.jpg);
+            opacity: 90%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+        }
+
+        .logo img{
+            height: 60px;
+            width: 60px;
+        }
+
+        .nav-buttons a{
+            color: rgb(255, 255, 255);
+            margin-left: 20px;
+            font-size: 1rem;
+            text-decoration: underline;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            background-color: rgb(252, 251, 251);
+            min-height: calc(100vh - 80px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .pfpp{
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .hero h1{
+            font-size: 2.5rem;
+            color: #000000;
+            margin-bottom: 10px;
+        }
+
+        .hero .highlight {
+            color: #071133;
+        }
+
+        .hero .subtitle {
+            font-size: 1.1rem;
+            color: #303033;
+            font-style: italic;
+        }
+
+        /* ABOUT ME / MY WORKS / CONTACT ME */
+        .container-ab-mw{
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #e7e7f0;
+            padding: 20px 30px;
+        }
+
+        .ab-mw-section-banner{
+            background-image: url(abmwbackgroundbanner.jpg);
+            color: white;
+            text-align: center;
+            padding: 12px 0;
+            border-radius: 8px;
+            font-size: 26px;
+            font-weight: bold;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            box-shadow: 22px 8px 33px -16px rgba(0, 0, 0, 0.34);
+        }
+
+        .about-text{
+            font-style: italic;
+            font-size: 16px;
+            color: #555555;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+
+        .project-image{
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .project-preview{
+            text-align: center;
+            flex: 1 1 280px;
+            max-width: 320px;
+        }
+
+        .image-frame{
+            border: 2px dashed #071133;
+            border-radius: 12px;
+            padding: 6px;
+            background-color: #fff;
+        }
+
+        .image-frame img{
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+        }
+
+        .caption{
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+        }
+
+        .project-details{
+            list-style: disc;
+            padding-left: 20px;
+            font-size: 16px;
+            line-height: 2.2;
+            flex: 1 1 250px;
+        }
+
+        .project-details li{
+            color: #333333;
+            font-style: italic;
+            white-space: normal;
+            word-break: break-word;
+        }
+
+        .check{
+            font-style: normal;
+            font-weight: bold;
+            margin-right: 4px;
+        }
+
+        .github-link{
+            color: #286aa0;
+            text-decoration: underline;
+            font-style: italic;
+        }
+
+        /* CONTACT FORM */
+        .cm-section-banner{
+            background-image: url(cmbackground.jpg);
+            color: white;
+            text-align: center;
+            padding: 12px 0;
+            border-radius: 8px;
+            font-size: 26px;
+            font-weight: bold;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            box-shadow: 22px 8px 33px -16px rgba(0, 0, 0, 0.34);
+        }
+
+        .contact-container{
+            background-color: white;
+            max-width: 500px;
+            margin: 0 auto 50px auto;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .contact-container .form-group{
+            margin-bottom: 16px;
+        }
+
+        .contact-container label{
+            display: block;
+            font-size: 13px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 6px;
+        }
+
+        .contact-container input[type="text"]{
+            width: 100%;
+            padding: 8px 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 13px;
+            outline: none;
+            color: #555;
+        }
+
+        .contact-container select{
+            width: 100%;
+            padding: 8px 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 13px;
+            outline: none;
+            color: #555;
+        }
+
+        .contact-container textarea {
+            width: 100%;
+            padding: 8px 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 13px;
+            outline: none;
+            color: #555;
+        }
+
+        .contact-container textarea{
+            resize: vertical;
+            height: 80px;
+        }
+
+        .contact-container .in-group{
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 12px;
+            color: #555;
+            flex-wrap: wrap;
+        }
+
+        .contact-container .in-group label{
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-weight: normal;
+            margin-bottom: 0;
+        }
+
+        .submit-button-container{
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .submit-button{
+            background-color: #071133;
+            color: white;
+            border: none;
+            padding: 10px 30px;
+            font-size: 13px;
+            font-weight: bold;
+            border-radius: 6px;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        footer{
+            text-align: center;
+            font-size: 14px;
+            color: #e7dbdb;
+            padding: 15px;
+            background-image: url(footerbackground.jpg);
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION BAR -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="ictlogo.png" alt="ictlogo">
+        </div>
+        <nav class="nav-buttons">
+            <a href="#about">About Me</a>
+            <a href="#works">My Works</a>
+            <a href="#contact">Contact Me</a>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="pfp">
+            <img src="avatar.png" alt="pfpp" class="pfpp">
+        </div>
+        <h1>Hello, I'm <span class="highlight">Aly Rodriguez!</span></h1>
+        <p class="subtitle">Aspiring Web Designer</p>
+    </section>
+
+    <div class="container-ab-mw">
+
+        <!--ABOUT ME-->
+        <h2 id="about" class="ab-mw-section-banner">About Me</h2>
+        <p class="about-text">
+            Hi! I'm Aly, a student who is passionate about technology,
+            especially in web developing, I enjoy creating simple and structured outputs
+            for school!
+        </p>
+
+        <!--MY WORKS-->
+        <h2 id="works" class="ab-mw-section-banner">My Works</h2>
+
+        <!--PROJECT 1-->
+        <div class="project-image">
+            <div class="project-preview">
+                <div class="image-frame">
+                    <img src="mytop3playlistsproject.png" alt="My Top 3 Playlists">
+                </div>
+                <p class="caption">My Top 3 Playlists</p>
+            </div>
+
+            <ul class="project-details">
+                <li><span class="check">✓</span>HTMl & CSS Projects</li>
+                <li><span class="check">✓</span>Spotify Artist</li>
+                <li><span class="check">✓</span>List, Links, and Images</li>
+                <li><a href="#" class="github-link">View Github Repository</a></li>
+            </ul>
+        </div>
+
+        <!-- PROJECT 2 -->
+        <div class="project-image">
+            <div class="project-preview">
+                <div class="image-frame">
+                    <img src="rateamovieproject.png" alt="Rate a Movie!">
+                </div>
+                <p class="caption">Rate a Movie!</p>
+            </div>
+
+            <ul class="project-details">
+                <li><span class="check">✓</span>HTML & CSS Projects</li>
+                <li><span class="check">✓</span>Spotify Artist</li>
+                <li><span class="check">✓</span>List, Links, and Images</li>
+                <li><a href="#" class="github-link">View Github Repository</a></li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <!--CONTACT FORM-->
+        <h2 id="contact" class="cm-section-banner">Contact Me</h2>
+
+        <div class="contact-container">
+            <form action="#" method="POST">
+
+                <div class="form-group">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" placeholder="Jane Doe">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Your Email:</label>
+                    <input type="text" id="email" placeholder="jane_doe@gmail.com">
+                </div>
+
+                <div class="form-group">
+                    <label>How did you find me?</label>
+                    <div class="in-group">
+                        <label><input type="radio" name="source" value="facebook"> Facebook</label>
+                        <label><input type="radio" name="source" value="google"> Google</label>
+                        <label><input type="radio" name="source" value="friends"> Friends</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Interested In:</label>
+                    <div class="in-group">
+                        <label><input type="checkbox" name="interest" value="web-design"> Web Design</label>
+                        <label><input type="checkbox" name="interest" value="graphic-design"> Graphic Design</label>
+                        <label><input type="checkbox" name="interest" value="robotics"> Robotics</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="rating">Rate My Portfolio</label>
+                    <select id="rating" name="rating">
+                        <option value="" disabled selected>-- Select Rating --</option>
+                        <option value="5">5 - Excellent</option>
+                        <option value="4">4 - Very Good</option>
+                        <option value="3">3 - Good</option>
+                        <option value="2">2 - Fair</option>
+                        <option value="1">1 - Needs Improvement</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="feedback">Any Feedback?</label>
+                    <textarea id="feedback" name="feedback" placeholder="Feedback here..."></textarea>
+                </div>
+
+                <div class="submit-button-container">
+                    <button type="submit" class="submit-button">Submit</button>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+
+</body>
+
+<footer>
+    <p> © 2026 Q1 Project | Created by Alyssandra Rodriguez | 9-Topaz</p>
+</footer>
+</html>
